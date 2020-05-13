@@ -13,6 +13,10 @@ svg {
     pointer-events: none;
 }
 
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
 .sequencer {
     display: flex;
     justify-content: center;
@@ -35,6 +39,13 @@ svg {
 .controls select {
     width: 13rem;
     padding: 5px;
+}
+
+.machine-controls {
+    margin: 2rem;
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .mute-btn,
@@ -81,7 +92,7 @@ svg {
 }
 
 .kick-pad {
-    background-color: #F28B79;
+    background-color: #89E1AE;
     /* opacity: 0; */
 
 }
@@ -99,7 +110,7 @@ svg {
 }
 
 .kick-pad.active {
-    background-color: rgb(255, 0, 13);
+    background-color: #226F54;
     /* opacity: 1; */
 
 }
@@ -113,15 +124,42 @@ svg {
 }
 
 .play-btn {
-    margin-top: 2rem;
     color: limegreen;
     background-color: inherit;
     font-size: 3rem;
     cursor: pointer;
 }
 
-.time-signature {
+.tempo {
     display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.tempo p {
+    font-size: 2rem;
+}
+
+.tempo input {
+    margin-top: 1rem;
+}
+
+.tempo-value {
+    font-size: 2rem;
+}
+
+.number-of-pads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number-of-pads select {
+    margin-top: .5rem;
+}
+
+.number-of-pads p {
+    font-size: 2rem;
 }
 
 @keyframes playTrack {

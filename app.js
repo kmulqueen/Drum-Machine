@@ -9,7 +9,7 @@ class DrumKit {
     this.muteBtns = document.querySelectorAll(".mute-btn");
     this.tempoSlider = document.querySelector(".tempo-slider");
     this.tempoValue = document.querySelector(".tempo-value");
-    this.timeSignatureSelect = document.querySelector(".time-signature-select");
+    this.numberOfPadsSelect = document.querySelector(".number-of-pads-select");
     this.hihatPads = document.querySelector(".hihat");
     this.snarePads = document.querySelector(".snare");
     this.kickPads = document.querySelector(".kick");
@@ -18,13 +18,13 @@ class DrumKit {
     this.kickSelection = "./allSounds/kick-808.wav";
     this.index = 0;
     this.tempo = 120;
-    this.timeSignature = 8;
+    this.numberOfPads = 8;
     this.isPlaying = null;
   }
 
   repeat() {
     // Sets # of Beats to play per measure (Top # of Time Signature)
-    let step = this.index % this.timeSignature;
+    let step = this.index % this.numberOfPads;
     const activeBeat = document.querySelectorAll(`.b${step}`);
     activeBeat.forEach((beat) => {
       beat.style.animation = `playTrack 0.1s alternate ease-in-out 2`;
@@ -119,7 +119,7 @@ class DrumKit {
     this.hihatPads.innerHTML = "";
     this.snarePads.innerHTML = "";
     this.kickPads.innerHTML = "";
-    for (let i = 0; i < this.timeSignature; i++) {
+    for (let i = 0; i < this.numberOfPads; i++) {
       this.hihatPads.innerHTML += `<div class="hihat-pad pad b${i}"></div>`;
       this.snarePads.innerHTML += `<div class="snare-pad pad b${i}"></div>`;
       this.kickPads.innerHTML += `<div class="kick-pad pad b${i}"></div>`;
@@ -132,8 +132,8 @@ class DrumKit {
       });
     });
   }
-  changeTimeSignature(e) {
-    this.timeSignature = e.target.value;
+  changeNumberOfPads(e) {
+    this.numberOfPads = e.target.value;
     this.renderPads();
   }
 }
@@ -170,6 +170,6 @@ drums.tempoSlider.addEventListener("input", function (e) {
   drums.changeTempo(e);
 });
 
-drums.timeSignatureSelect.addEventListener("change", function (e) {
-  drums.changeTimeSignature(e);
+drums.numberOfPadsSelect.addEventListener("change", function (e) {
+  drums.changeNumberOfPads(e);
 });
