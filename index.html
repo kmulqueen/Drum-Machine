@@ -25,16 +25,7 @@
             <option value="./allSounds/hihat-analog.wav">Analog Hi-Hat</option>
           </select>
         </div>
-        <div class="hihat">
-          <div class="hihat-pad pad b0"></div>
-          <div class="hihat-pad pad b1"></div>
-          <div class="hihat-pad pad b2"></div>
-          <div class="hihat-pad pad b3"></div>
-          <div class="hihat-pad pad b4"></div>
-          <div class="hihat-pad pad b5"></div>
-          <div class="hihat-pad pad b6"></div>
-          <div class="hihat-pad pad b7"></div>
-        </div>
+        <div class="hihat"></div>
       </div>
       <div class="snare-track">
         <div class="controls">
@@ -48,16 +39,7 @@
             <option value="./allSounds/snare-sumo.wav">Sumo Snare</option>
           </select>
         </div>
-        <div class="snare">
-          <div class="snare-pad pad b0"></div>
-          <div class="snare-pad pad b1"></div>
-          <div class="snare-pad pad b2"></div>
-          <div class="snare-pad pad b3"></div>
-          <div class="snare-pad pad b4"></div>
-          <div class="snare-pad pad b5"></div>
-          <div class="snare-pad pad b6"></div>
-          <div class="snare-pad pad b7"></div>
-        </div>
+        <div class="snare"></div>
       </div>
       <div class="kick-track">
         <div class="controls">
@@ -71,18 +53,46 @@
             <option value="./allSounds/kick-tron.wav">Tron Bass</option>
           </select>
         </div>
-        <div class="kick">
-          <div class="kick-pad pad b0"></div>
-          <div class="kick-pad pad b1"></div>
-          <div class="kick-pad pad b2"></div>
-          <div class="kick-pad pad b3"></div>
-          <div class="kick-pad pad b4"></div>
-          <div class="kick-pad pad b5"></div>
-          <div class="kick-pad pad b6"></div>
-          <div class="kick-pad pad b7"></div>
-        </div>
+        <div class="kick"></div>
       </div>
       <button class="play-btn"><i class="fas fa-play"></i></button>
+      <div class="tempo">
+        <input
+          type="range"
+          name="tempo-slider"
+          class="tempo-slider"
+          max="450"
+          min="30"
+        />
+        <p>Tempo: <span class="tempo-value">120</span> BPM</p>
+      </div>
+      <div class="time-signature">
+        <p>
+          Time Signature:
+          <select name="time-signature-select" class="time-signature-select">
+            <option value="2">2/4</option>
+            <option value="3">3/4</option>
+            <option value="4">4/4</option>
+            <option value="5">5/4</option>
+            <option value="6">6/4</option>
+            <option value="7">7/4</option>
+            <option value="8" selected>8/4</option>
+            <option value="9">9/4</option>
+            <option value="10">10/4</option>
+            <option value="11">11/4</option>
+            <option value="12">12/4</option>
+            <option value="13">13/4</option>
+            <option value="14">14/4</option>
+            <option value="15">15/4</option>
+            <option value="16">16/4</option>
+            <option value="17">17/4</option>
+            <option value="18">18/4</option>
+            <option value="19">19/4</option>
+            <option value="20">20/4</option>
+            <option value="21">21/4</option>
+          </select>
+        </p>
+      </div>
     </div>
     <audio src="./allSounds/hihat-808.wav" class="hihat-sound"></audio>
     <audio src="./allSounds/snare-808.wav" class="snare-sound"></audio>
