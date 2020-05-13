@@ -115,6 +115,13 @@ class DrumKit {
     this.tempo = e.target.value;
     this.tempoValue.innerText = this.tempo;
   }
+  updateTempo() {
+    clearInterval(this.isPlaying);
+    this.isPlaying = null;
+    if (this.playBtn.children[0].classList.contains("fa-stop")) {
+      this.start();
+    }
+  }
   renderPads() {
     this.hihatPads.innerHTML = "";
     this.snarePads.innerHTML = "";
@@ -168,6 +175,9 @@ drums.muteBtns.forEach((btn) => {
 
 drums.tempoSlider.addEventListener("input", function (e) {
   drums.changeTempo(e);
+});
+drums.tempoSlider.addEventListener("change", function () {
+  drums.updateTempo();
 });
 
 drums.numberOfPadsSelect.addEventListener("change", function (e) {
