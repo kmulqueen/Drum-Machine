@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ba063b2155.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Drum Machine</title>
+  </head>
+
+  <body>
+    <div class="sequencer">
+      <div class="hihat-track">
+        <div class="controls">
+          <h1>Hi-Hat</h1>
+          <button class="mute-btn" track="1">
+            <i class="fas fa-volume-mute"></i>
+          </button>
+          <select name="hihat-select" id="hihat-select">
+            <option value="./allSounds/hihat-808.wav">808 Hi-Hat</option>
+            <option value="./allSounds/hihat-ring.wav">Ring Hi-Hat</option>
+            <option value="./allSounds/hihat-analog.wav">Analog Hi-Hat</option>
+          </select>
+        </div>
+        <div class="hihat">
+          <div class="hihat-pad pad b0"></div>
+          <div class="hihat-pad pad b1"></div>
+          <div class="hihat-pad pad b2"></div>
+          <div class="hihat-pad pad b3"></div>
+          <div class="hihat-pad pad b4"></div>
+          <div class="hihat-pad pad b5"></div>
+          <div class="hihat-pad pad b6"></div>
+          <div class="hihat-pad pad b7"></div>
+        </div>
+      </div>
+      <div class="snare-track">
+        <div class="controls">
+          <h1>Snare Drum</h1>
+          <button class="mute-btn" track="2">
+            <i class="fas fa-volume-mute"></i>
+          </button>
+          <select name="snare-select" id="snare-select">
+            <option value="./allSounds/snare-808.wav">808 Snare</option>
+            <option value="./allSounds/snare-modular.wav">Modular Snare</option>
+            <option value="./allSounds/snare-sumo.wav">Sumo Snare</option>
+          </select>
+        </div>
+        <div class="snare">
+          <div class="snare-pad pad b0"></div>
+          <div class="snare-pad pad b1"></div>
+          <div class="snare-pad pad b2"></div>
+          <div class="snare-pad pad b3"></div>
+          <div class="snare-pad pad b4"></div>
+          <div class="snare-pad pad b5"></div>
+          <div class="snare-pad pad b6"></div>
+          <div class="snare-pad pad b7"></div>
+        </div>
+      </div>
+      <div class="kick-track">
+        <div class="controls">
+          <h1>Bass Drum</h1>
+          <button class="mute-btn" track="3">
+            <i class="fas fa-volume-mute"></i>
+          </button>
+          <select name="kick-select" id="kick-select">
+            <option value="./allSounds/kick-808.wav">808 Bass</option>
+            <option value="./allSounds/kick-deep.wav">Deep Bass</option>
+            <option value="./allSounds/kick-tron.wav">Tron Bass</option>
+          </select>
+        </div>
+        <div class="kick">
+          <div class="kick-pad pad b0"></div>
+          <div class="kick-pad pad b1"></div>
+          <div class="kick-pad pad b2"></div>
+          <div class="kick-pad pad b3"></div>
+          <div class="kick-pad pad b4"></div>
+          <div class="kick-pad pad b5"></div>
+          <div class="kick-pad pad b6"></div>
+          <div class="kick-pad pad b7"></div>
+        </div>
+      </div>
+      <button class="play-btn"><i class="fas fa-play"></i></button>
+    </div>
+    <audio src="./allSounds/hihat-808.wav" class="hihat-sound"></audio>
+    <audio src="./allSounds/snare-808.wav" class="snare-sound"></audio>
+    <audio src="./allSounds/kick-808.wav" class="kick-sound"></audio>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+i,
+svg {
+    pointer-events: none;
+}
+
+.sequencer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.controls {
+    display: flex;
+    width: 50rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls h1 {
+    width: 12rem;
+}
+
+.controls select {
+    width: 13rem;
+    padding: 5px;
+}
+
+.mute-btn,
+.play-btn {
+    padding: 1rem;
+    border: none;
+}
+
+.mute-btn.active {
+    background-color: red;
+}
+
+.fa-stop {
+    color: red;
+}
+
+
+.hihat-track,
+.snare-track,
+.kick-track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.pad {
+    height: 5rem;
+    width: 5rem;
+    margin: 1rem;
+
+}
+
+.hihat-pad {
+    background-color: #ABEFF8;
+}
+
+.snare-pad {
+    background-color: #F7B3E0;
+}
+
+.kick-pad {
+    background-color: #F28B79;
+}
+
+.hihat-pad.active {
+    background-color: #067BC2;
+}
+
+.snare-pad.active {
+    background-color: #E56399;
+}
+
+.kick-pad.active {
+    background-color: rgb(255, 0, 13);
+}
+
+.hihat,
+.snare,
+.kick {
+    display: flex;
+}
+
+.play-btn {
+    margin-top: 2rem;
+    color: limegreen;
+    background-color: inherit;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+@keyframes playTrack {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.3);
+    }
+}
