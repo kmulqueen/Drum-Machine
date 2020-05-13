@@ -65,37 +65,51 @@ svg {
     height: 5rem;
     width: 5rem;
     margin: 1rem;
-
+    /* opacity: 0; */
 }
 
 .hihat-pad {
     background-color: #ABEFF8;
+    /* opacity: 0; */
+
 }
 
 .snare-pad {
     background-color: #F7B3E0;
+    /* opacity: 0; */
+
 }
 
 .kick-pad {
     background-color: #F28B79;
+    /* opacity: 0; */
+
 }
 
 .hihat-pad.active {
     background-color: #067BC2;
+    /* opacity: 1; */
+
 }
 
 .snare-pad.active {
     background-color: #E56399;
+    /* opacity: 1; */
+
 }
 
 .kick-pad.active {
     background-color: rgb(255, 0, 13);
+    /* opacity: 1; */
+
 }
 
 .hihat,
 .snare,
 .kick {
     display: flex;
+    width: 75%;
+    justify-content: center;
 }
 
 .play-btn {
@@ -106,12 +120,16 @@ svg {
     cursor: pointer;
 }
 
+.time-signature {
+    display: flex;
+}
+
 @keyframes playTrack {
     from {
         transform: scale(1);
     }
 
     to {
-        transform: scale(1.3);
+        transform: scale(1.2);
     }
 }
