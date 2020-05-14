@@ -76,42 +76,41 @@ body {
     height: 5rem;
     width: 5rem;
     margin: 1rem;
-    /* opacity: 0; */
 }
 
 .hihat-pad {
     background-color: #ABEFF8;
-    /* opacity: 0; */
+    opacity: 0.4;
 
 }
 
 .snare-pad {
     background-color: #F7B3E0;
-    /* opacity: 0; */
+    opacity: 0.4;
 
 }
 
 .kick-pad {
     background-color: #89E1AE;
-    /* opacity: 0; */
+    opacity: 0.4;
 
 }
 
 .hihat-pad.active {
     background-color: #067BC2;
-    /* opacity: 1; */
+    opacity: 1;
 
 }
 
 .snare-pad.active {
     background-color: #E56399;
-    /* opacity: 1; */
+    opacity: 1;
 
 }
 
 .kick-pad.active {
     background-color: #226F54;
-    /* opacity: 1; */
+    opacity: 1;
 
 }
 
