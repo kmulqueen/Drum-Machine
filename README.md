@@ -2,7 +2,7 @@
 
 This is a simple drum machine/sequencer that is similar to a basic sample pad. There are currently only 3 tracks (hihat, snare, kick) but I am planning on allowing the user to create new tracks, as well as update the sound library.
 
-![Drum Machine App](/images/drum-machine.png)
+![Drum Machine App](/images/drum-machine-app.png)
 
 ## Interact
 
